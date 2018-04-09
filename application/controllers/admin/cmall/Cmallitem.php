@@ -497,7 +497,7 @@ class Cmallitem extends CB_Controller
                         @chmod($file, 0644);
                     }
 
-                    $uploadconfig = '';
+                    $uploadconfig = array();
                     $uploadconfig['upload_path'] = $upload_path;
                     $uploadconfig['allowed_types'] = 'jpg|jpeg|png|gif';
                     $uploadconfig['max_size'] = '5000';
@@ -554,7 +554,7 @@ class Cmallitem extends CB_Controller
 
                 foreach ($_FILES['cde_file']['name'] as $i => $value) {
                     if ($value) {
-                        $uploadconfig = '';
+                        $uploadconfig = array();
                         $uploadconfig['upload_path'] = $upload_path;
                         $uploadconfig['allowed_types'] = '*';
                         $uploadconfig['encrypt_name'] = true;
@@ -619,7 +619,7 @@ class Cmallitem extends CB_Controller
 
                 foreach ($_FILES['cde_file_update']['name'] as $i => $value) {
                     if ($value) {
-                        $uploadconfig = '';
+                        $uploadconfig = array();
                         $uploadconfig['upload_path'] = $upload_path;
                         $uploadconfig['allowed_types'] = '*';
                         $uploadconfig['encrypt_name'] = true;

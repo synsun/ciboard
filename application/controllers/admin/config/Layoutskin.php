@@ -1428,7 +1428,7 @@ class Layoutskin extends CB_Controller
                     @chmod($file, 0644);
                 }
 
-                $uploadconfig = '';
+                $uploadconfig = array();
                 $uploadconfig['upload_path'] = $upload_path;
                 $uploadconfig['allowed_types'] = 'ico';
                 $uploadconfig['max_width'] = '16';

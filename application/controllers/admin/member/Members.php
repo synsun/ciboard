@@ -410,7 +410,7 @@ class Members extends CB_Controller
                     @chmod($file, 0644);
                 }
 
-                $uploadconfig = '';
+                $uploadconfig = array();
                 $uploadconfig['upload_path'] = $upload_path;
                 $uploadconfig['allowed_types'] = 'jpg|jpeg|png|gif';
                 $uploadconfig['max_size'] = '2000';
@@ -460,7 +460,7 @@ class Members extends CB_Controller
                     @fclose($f);
                     @chmod($file, 0644);
                 }
-                $uploadconfig = '';
+                $uploadconfig = array();
                 $uploadconfig['upload_path'] = $upload_path;
                 $uploadconfig['allowed_types'] = 'jpg|jpeg|png|gif';
                 $uploadconfig['max_size'] = '2000';

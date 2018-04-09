@@ -452,7 +452,7 @@ class Note extends CB_Controller
                         @chmod($file, 0644);
                     }
 
-                    $uploadconfig = '';
+                    $uploadconfig = array();
                     $uploadconfig['upload_path'] = $upload_path;
                     $uploadconfig['allowed_types'] = '*';
                     $uploadconfig['encrypt_name'] = true;

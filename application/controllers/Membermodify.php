@@ -451,7 +451,7 @@ class Membermodify extends CB_Controller
                         @chmod($file, 0644);
                     }
 
-                    $uploadconfig = '';
+                    $uploadconfig = array();
                     $uploadconfig['upload_path'] = $upload_path;
                     $uploadconfig['allowed_types'] = 'jpg|jpeg|png|gif';
                     $uploadconfig['max_size'] = '2000';
@@ -506,7 +506,7 @@ class Membermodify extends CB_Controller
                         @chmod($file, 0644);
                     }
 
-                    $uploadconfig = '';
+                    $uploadconfig = array();
                     $uploadconfig['upload_path'] = $upload_path;
                     $uploadconfig['allowed_types'] = 'jpg|jpeg|png|gif';
                     $uploadconfig['max_size'] = '2000';
@@ -538,7 +538,7 @@ class Membermodify extends CB_Controller
 
             $view['view']['message'] = $file_error . $file_error2;
 
-            $html_content = '';
+            $html_content = array();
             $k = 0;
             if ($form && is_array($form)) {
                 foreach ($form as $key => $value) {
