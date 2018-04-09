@@ -84,6 +84,7 @@ $query_builder = TRUE;
 $db['default'] = array(
 	//'dsn'	=> 'mysql:host=localhost;dbname=yourdatabasenamehere',
 	'hostname' => 'localhost',
+    'port' => '3306',
 	'username' => '',
 	'password' => '',
 	'database' => '',
