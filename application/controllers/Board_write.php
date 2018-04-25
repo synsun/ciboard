@@ -402,7 +402,7 @@ class Board_write extends CB_Controller
         $form_validation = $this->form_validation->run();
 
         $file_error = '';
-        $uploadfiledata = '';
+        $uploadfiledata = array();
 
         if (element('use_upload_file', $board)) {
             $check = array(
