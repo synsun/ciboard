@@ -1746,8 +1746,8 @@ class Board_write extends CB_Controller
         $this->form_validation->set_rules($config);
         $form_validation = $this->form_validation->run();
         $file_error = '';
-        $uploadfiledata = '';
-        $uploadfiledata2 = '';
+        $uploadfiledata = array();
+        $uploadfiledata2 = array();
         if ($use_upload === true && $form_validation && element('use_upload_file', $board)) {
             $this->load->library('upload');
             if (isset($_FILES) && isset($_FILES['post_file']) && isset($_FILES['post_file']['name']) && is_array($_FILES['post_file']['name'])) {

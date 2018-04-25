@@ -517,8 +517,8 @@ class Cmallitem extends CB_Controller
             }
         }
 
-        $uploadfiledata = '';
-        $uploadfiledata2 = '';
+        $uploadfiledata = array();
+        $uploadfiledata2 = array();
 
         if ($form_validation && $file_error === '') {
             $this->load->library('upload');
