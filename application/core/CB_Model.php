@@ -55,10 +55,10 @@ class CB_Model extends CI_Model
     }
 
 
-    public function get($primary_value = '', $select = '', $where = '', $limit = '', $offset = 0, $findex = '', $forder = '')
+    public function get($primary_value = '', $select = '', $where = '', $limit = '', $offset = 0, $findex = '', $forder = '', $join_table = '', $join_sql = '')
     {
 
-        $result = $this->_get($primary_value, $select, $where, $limit, $offset, $findex, $forder);
+        $result = $this->_get($primary_value, $select, $where, $limit, $offset, $findex, $forder, $join_table, $join_sql);
         return $result->result_array();
     }
 
@@ -74,10 +74,13 @@ class CB_Model extends CI_Model
         return $result->row_array();
     }
 
-    public function _get($primary_value = '', $select = '', $where = '', $limit = '', $offset = 0, $findex = '', $forder = '')
+    public function _get($primary_value = '', $select = '', $where = '', $limit = '', $offset = 0, $findex = '', $forder = '', $join_table = '', $join_sql = '')
     {
         if ($select) {
             $this->db->select($select);
+        }
+        if ($join_sql) {
+            $this->db->join($join_table, $join_sql);
         }
         $this->db->from($this->_table);
         if ($primary_value) {
