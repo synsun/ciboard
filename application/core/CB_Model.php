@@ -62,13 +62,17 @@ class CB_Model extends CI_Model
         return $result->result_array();
     }
 
-
     public function get_one($primary_value = '', $select = '', $where = '')
     {
         $result = $this->_get($primary_value, $select, $where, 1);
         return $result->row_array();
     }
 
+    public function get_last_one($primary_value = '', $select = '', $where = '', $findex = '')
+    {
+        $result = $this->_get($primary_value, $select, $where, $limit = 1, $offset = 0, $findex, $forder = 'DESC');
+        return $result->row_array();
+    }
 
     public function _get($primary_value = '', $select = '', $where = '', $limit = '', $offset = 0, $findex = '', $forder = '')
     {
